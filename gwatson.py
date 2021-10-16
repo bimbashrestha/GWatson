@@ -34,18 +34,6 @@ def main() -> None:
     gw_application.exec_()
 
 
-def find_and_replace(path: str, find_str: str, replace_str: str) -> None:
-    with open(path, "r") as f:
-        content = f.read()
-    content = content.replace(find_str, replace_str)
-    with open(path, "w") as f:
-        f.write(content)
-
-
-def str_to_timestamp(datetime_str: str) -> str:
-    return str(int(datetime.fromisoformat(datetime_str).timestamp()))
-
-
 class GWApplication(QApplication):
     def __init__(self) -> None:
         QApplication.__init__(self, [])
@@ -195,6 +183,18 @@ class GWMainWindow(QMainWindow):
     def showEvent(self, event: QShowEvent) -> None:
         self.window_shown.emit()
         return super().showEvent(event)
+
+
+def find_and_replace(path: str, find_str: str, replace_str: str) -> None:
+    with open(path, "r") as f:
+        content = f.read()
+    content = content.replace(find_str, replace_str)
+    with open(path, "w") as f:
+        f.write(content)
+
+
+def str_to_timestamp(datetime_str: str) -> str:
+    return str(int(datetime.fromisoformat(datetime_str).timestamp()))
 
 
 class GWCli(object):
