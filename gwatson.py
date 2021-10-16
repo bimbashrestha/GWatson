@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import os
+import sys
 import json
 import subprocess
 
@@ -25,9 +26,17 @@ from datetime import datetime
 
 GW_LOGO_PATH = "logo.png"
 GW_WATSON = "watson"
-GW_FRAMES_PATH = os.path.join(os.path.expanduser("~"),
-                              "Library/Application Support/watson/frames")
 
+
+def home_path(path: str) -> str:
+    return os.path.join(os.path.expanduser("~"), path)
+
+if sys.platform == "darwin":
+    GW_FRAMES_PATH = home_path("Library/Application Support/watson/frames")
+elif sys.platform == "linux":
+    GW_FRAMES_PATH = home_path(".config/watson/config")
+else:
+    raise Exception("Windows not supported right now.")
 
 def main() -> None:
     gw_application = GWApplication()
