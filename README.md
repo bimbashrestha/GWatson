@@ -1,6 +1,6 @@
 # GWatson 
 
-A GUI wrapper around Watson.
+A GUI wrapper around [Watson](https://github.com/TailorDev/Watson).
 
 ![](demo.gif)
 
