@@ -2,9 +2,11 @@
 
 # GWatson 
 
-A GUI wrapper around [Watson](https://github.com/TailorDev/Watson).
+A GUI wrapper around [Watson](https://github.com/TailorDev/Watson). 
 
 ![](demo.gif)
+
+Works on OSX and Linux. Will work on Windows too after some small changes. Just haven't gotten around to it.
 
 # Installation 
 
