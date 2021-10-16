@@ -31,12 +31,14 @@ GW_WATSON = "watson"
 def home_path(path: str) -> str:
     return os.path.join(os.path.expanduser("~"), path)
 
+
 if sys.platform == "darwin":
     GW_FRAMES_PATH = home_path("Library/Application Support/watson/frames")
 elif sys.platform == "linux":
     GW_FRAMES_PATH = home_path(".config/watson/config")
 else:
     raise Exception("Windows not supported right now.")
+
 
 def main() -> None:
     gw_application = GWApplication()
