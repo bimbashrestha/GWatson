@@ -35,7 +35,7 @@ def home_path(path: str) -> str:
 if sys.platform == "darwin":
     GW_FRAMES_PATH = home_path("Library/Application Support/watson/frames")
 elif sys.platform == "linux":
-    GW_FRAMES_PATH = home_path(".config/watson/config")
+    GW_FRAMES_PATH = home_path(".config/watson/frames")
 else:
     raise Exception("Windows not supported right now.")
 
