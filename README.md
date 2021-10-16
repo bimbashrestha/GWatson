@@ -2,6 +2,8 @@
 
 A GUI wrapper around Watson.
 
+![](demo.gif)
+
 # Installation 
 
 Clone this repo and inside it run:
