@@ -1,3 +1,5 @@
+![](logo.png)
+
 # GWatson 
 
 A GUI wrapper around [Watson](https://github.com/TailorDev/Watson).
